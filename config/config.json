@@ -1,11 +1,19 @@
 {
-  "development": {
-    "username": "pycfdmaqrk6v3tn3",
-    "password": "p6ie7s1rpcozfkxs",
-    "database": "pbtulirhjvhe2mry",
-    "host": "u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  "local": {
+    "username": "root",
+    "password": "Koshima_2019",
+    "database": "stambdb_local",
+    "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
   },
+  "development": {
+  "username": "pycfdmaqrk6v3tn3",
+  "password": "p6ie7s1rpcozfkxs",
+  "database": "pbtulirhjvhe2mry",
+  "host": "u0zbt18wwjva9e0v.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  "dialect": "mysql"
+},
   "test": {
     "username": "pycfdmaqrk6v3tn3",
     "password": "p6ie7s1rpcozfkxs",
