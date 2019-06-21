@@ -5,7 +5,7 @@ var $password = $("#password");
 var $last = $("#last");
 var $first = $("#first");
 
-console.log("index.js")
+console.log("register.handlebars.js")
 
 
 // The API object contains methods for each kind of request we'll make
