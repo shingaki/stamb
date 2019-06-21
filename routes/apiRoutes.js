@@ -21,4 +21,12 @@ module.exports = function(app) {
       res.json(dbUser);
     });
   });
+
+  // Create a new User
+  app.post("/register", function(req, res) {
+    db.User.create(req.body).then(function(dbUser) {
+      res.json(dbUser);
+    });
+  });
+
 };

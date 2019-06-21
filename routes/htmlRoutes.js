@@ -4,7 +4,7 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.User.findAll({}).then(function(dbUser) {
-      res.render("index", {
+      res.render("loginPage.handlebars", {
         msg: "Welcome!",
         user: dbUser
       });
@@ -18,6 +18,12 @@ module.exports = function(app) {
         user: dbUser
       });
     });
+  });
+
+  // Render 404 page for any unmatched routes
+  app.get("/register", function(req, res) {
+    res.render("registrationPage.handlebars", {
+        style: "body" })
   });
 
   // Render 404 page for any unmatched routes
