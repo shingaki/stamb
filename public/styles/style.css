@@ -1,10 +1,4 @@
 
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
 @font-face {
     font-family: Montserrat;
   }
@@ -21,10 +15,7 @@
     font-family: Montserrat;
     src: "Montserrat-Medium.ttf"
   }
-  
-  /*//////////////////////////////////////////////////////////////////
-  [ RESTYLE TAG ]*/
-  
+
   * {
       margin: 0px; 
       padding: 0px; 
@@ -35,8 +26,6 @@
       height: 100%;
       font-family: Montserrat, sans-serif;
   }
-  
-  /*---------------------------------------------*/
   a {
       font-family: Montserrat;
       font-size: 14px;
@@ -45,20 +34,8 @@
       margin: 0px;
       transition: all 0.4s;
       -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
   }
-  
-  a:focus {
-      outline: none !important;
-  }
-  
-  a:hover {
-      text-decoration: none;
-    color: #57b846;
-  }
-  
-  /*---------------------------------------------*/
+
   h1,h2,h3,h4,h5,h6 {
       margin: 0px;
   }
@@ -75,9 +52,6 @@
       margin: 0px;
       list-style-type: none;
   }
-  
-  
-  /*---------------------------------------------*/
   input {
       outline: none;
       border: none;
@@ -92,27 +66,6 @@
     border-color: transparent !important;
   }
   
-  input:focus::-webkit-input-placeholder { color:transparent; }
-  input:focus:-moz-placeholder { color:transparent; }
-  input:focus::-moz-placeholder { color:transparent; }
-  input:focus:-ms-input-placeholder { color:transparent; }
-  
-  textarea:focus::-webkit-input-placeholder { color:transparent; }
-  textarea:focus:-moz-placeholder { color:transparent; }
-  textarea:focus::-moz-placeholder { color:transparent; }
-  textarea:focus:-ms-input-placeholder { color:transparent; }
-  
-  input::-webkit-input-placeholder { color: #999999; }
-  input:-moz-placeholder { color: #999999; }
-  input::-moz-placeholder { color: #999999; }
-  input:-ms-input-placeholder { color: #999999; }
-  
-  textarea::-webkit-input-placeholder { color: #999999; }
-  textarea:-moz-placeholder { color: #999999; }
-  textarea::-moz-placeholder { color: #999999; }
-  textarea:-ms-input-placeholder { color: #999999; }
-  
-  /*---------------------------------------------*/
   button {
       outline: none !important;
       border: none;
@@ -126,10 +79,7 @@
   iframe {
       border: none !important;
   }
-  
-  
-  /*//////////////////////////////////////////////////////////////////
-  [ Utility ]*/
+
   .txt1 {
     font-family: Montserrat;
     font-size: 13px;
@@ -144,10 +94,6 @@
     color: #666666;
   }
   
-  
-  /*//////////////////////////////////////////////////////////////////
-  [ login ]*/
-  
   .limiter {
     width: 100%;
     margin: 0 auto;
@@ -158,8 +104,6 @@
     min-height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -167,8 +111,6 @@
     padding: 15px;
     background: #9053c7;
     background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
     background: linear-gradient(-135deg, #c850c0, #4158d0);
   }
   
@@ -180,16 +122,12 @@
   
     display: -webkit-box;
     display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 177px 130px 33px 95px;
   }
   
-  /*------------------------------------------------------------------
-  [  ]*/
   .login100-pic {
     width: 316px;
   }
@@ -198,9 +136,6 @@
     max-width: 100%;
   }
   
-  
-  /*------------------------------------------------------------------
-  [  ]*/
   .login100-form {
     width: 290px;
   }
@@ -217,8 +152,6 @@
     padding-bottom: 54px;
   }
   
-  
-  /*---------------------------------------------*/
   .wrap-input100 {
     position: relative;
     width: 100%;
@@ -240,9 +173,6 @@
     padding: 0 30px 0 68px;
   }
   
-  
-  /*------------------------------------------------------------------
-  [ Focus ]*/
   .focus-input100 {
     display: block;
     position: absolute;
@@ -280,8 +210,6 @@
   
     display: -webkit-box;
     display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     align-items: center;
     position: absolute;
@@ -311,8 +239,6 @@
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -332,29 +258,18 @@
     background: #57b846;
     display: -webkit-box;
     display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 25px;
   
     -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
     transition: all 0.4s;
   }
   
   .login100-form-btn:hover {
     background: #333333;
   }
-  
-  
-  
-  /*------------------------------------------------------------------
-  [ Responsive ]*/
-  
-  
   
   @media (max-width: 992px) {
     .wrap-login100 {
@@ -389,11 +304,7 @@
       padding: 100px 15px 33px 15px;
     }
   }
-  
-  
-  /*------------------------------------------------------------------
-  [ Alert validate ]*/
-  
+    
   .validate-input {
     position: relative;
   }
@@ -408,9 +319,6 @@
     padding: 4px 25px 4px 10px;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 8px;
     pointer-events: none;
@@ -425,8 +333,6 @@
     opacity: 0;
   
     -webkit-transition: opacity 0.4s;
-    -o-transition: opacity 0.4s;
-    -moz-transition: opacity 0.4s;
     transition: opacity 0.4s;
   }
   
@@ -439,9 +345,6 @@
     font-size: 15px;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 13px;
   }
