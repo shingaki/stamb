@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css" rel="stylesheet" media="all">
     <link href="styles/registration.css" rel="stylesheet" media="all">
+    
 
 </head>
 <body>
@@ -17,24 +18,24 @@
                     <div class="card card-4">
                         <div class="card-body">
                             <h2 class="title">Sign Up!</h2>
-                            <form method="POST">
+                            <form method="POST" id="signUpForm" onsubmit="return signUpForm()">
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="input-group">
                                             <label class="label">First Name</label>
-                                            <input class="input--style-4" type="text" name="first_name" required>
+                                            <input class="input--style-4" id = "first" type="text" name="first_name" required>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group">
                                             <label class="label">Last Name</label>
-                                            <input class="input--style-4" type="text" name="last_name" required>
+                                            <input class="input--style-4" id="last" type="text" name="last_name" required>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group">
                                             <label class="label">User Name</label>
-                                            <input class="input--style-4" type="text" name="user_name" required>
+                                            <input class="input--style-4" id="user" type="text" name="user_name" required>
                                         </div>
                                     </div>
                                 </div>
@@ -45,24 +46,18 @@
                                             <input class="input--style-4" type="email" name="email">
                                         </div>
                                     </div>
-                                    <div class="col-2">
-                                        <div class="input-group">
-                                            <label class="label">Phone Number</label>
-                                            <input class="input--style-4" type="text" name="phone">
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="row row-space">
                                         <div class="col-2">
                                             <div class="input-group">
                                                 <label class="label">Password</label>
-                                                <input class="input--style-4" type="password" name="password" required>
+                                                <input class="input--style-4" id="passwords" type="password" name="password" required>
                                             </div>
                                         </div>
                                         <div class="col-2">
                                             <div class="input-group">
                                                 <label class="label">Confirm Password</label>
-                                                <input class="input--style-4" type="password" name="confirm" aria-required="true">
+                                                <input class="input--style-4" id="passwordConfirm" type="password" name="confirm" aria-required="true">
                                             </div>
                                         </div>
                                     </div>
@@ -81,6 +76,7 @@
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
             <script href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
+            <script type="text/javascript" href="js/registrationPage.js"></script>
                 
         </body>
         
