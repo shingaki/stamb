@@ -4,6 +4,8 @@ var $email = $("#email");
 var $password = $("#password");
 var $last = $("#last");
 var $first = $("#first");
+var confirmPassword = $("#confirm_password");
+
 
 console.log("register.handlebars.js")
 
