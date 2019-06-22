@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.5/daterangepicker.css" rel="stylesheet" media="all">
     <link href="styles/registration.css" rel="stylesheet" media="all">
+    <link href= "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.amd.js">
+    <link href="views/index.handlebars" rel="handlebars">
     
 
 </head>
@@ -43,7 +45,7 @@
                                     <div class="col-2">
                                         <div class="input-group">
                                             <label class="label">Email</label>
-                                            <input class="input--style-4" type="email" name="email">
+                                            <input class="input--style-4" id="email" type="email" name="email">
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +53,7 @@
                                         <div class="col-2">
                                             <div class="input-group">
                                                 <label class="label">Password</label>
-                                                <input class="input--style-4" id="passwords" type="password" name="password" required>
+                                                <input class="input--style-4" id="password" type="password" name="password" required>
                                             </div>
                                         </div>
                                         <div class="col-2">
@@ -62,7 +64,7 @@
                                         </div>
                                     </div>
                                 <div class="p-t-15">
-                                    <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                                    <button class="btn btn--radius-2 btn--blue" id="submit" type="submit">Submit</button>
                                 </div>
                             </form>
                         </div>
