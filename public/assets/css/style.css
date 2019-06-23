@@ -1,0 +1,314 @@
+:root {
+    --font-main     : "Nunito", sans-serif;
+    --font-highlight: "Leckerli One", cursive;
+
+    --height-nav: 40px;
+
+    --color-white-transparent: rgba(255, 255, 255, 0.92);
+}
+
+body {
+    font-family: var(--font-ADKn);
+    font-size  : 20px;
+}
+
+#ADK-device-detector {
+    font-size: 4px;
+}
+
+.ADK-mobile-page {
+    display: none;
+}
+
+h1 {
+    font-family   : var(--font-highlight);
+    font-size     : 2.8em;
+    height        : 1.4em;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.ADK-attacher-1 {
+    margin-bottom: 0;
+}
+
+.ADK-separator-1 {
+    height: 0.4em;
+}
+
+.ADK-separator-2 {
+    height: 1.2em;
+}
+
+.ADK-separator-3 {
+    height: 2em;
+}
+
+nav, nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons, nav .button-collapse i {
+    height     : var(--height-nav);
+    line-height: var(--height-nav);
+}
+
+nav .brand-logo {
+    font-family   : var(--font-highlight);
+    font-size     : 1.05em;
+    height        : 1.4em;
+    letter-spacing: 0.04em;
+    top           : 0.15em;
+    margin-left   : 1em;
+}
+
+nav .brand-logo img {
+    height: 100%;
+}
+
+nav .ADK-menu-desktop-items {
+    font-size     : 0.75em;
+    letter-spacing: 0.01em;
+}
+
+nav #ADK-menu-desktop li:last-child {
+    margin-right: 1em;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#ADK-footer-social li {
+    font-size    : 1.6em;
+    float        : left;
+    padding-right: 0.9em;
+}
+
+.footer-copyright {
+    font-size: 0.75em;
+}
+
+.input-field {
+    margin-top   : 0.6em;
+    margin-bottom: 0.6em;
+}
+
+label {
+    font-size: 0.85em !important;
+}
+
+button {
+    font-size: 0.85em !important;
+    width    : 100%;
+}
+
+img.circle {
+    width: 100%;
+}
+
+.card label {
+    font-size: 1.2em !important;
+}
+
+.card input {
+    font-size    : 1.2em !important;
+    margin-top   : 0.75em !important;
+    margin-bottom: 1.5em !important;
+}
+
+.card p {
+    font-size: 1.2em !important;
+}
+
+.card a.btn-floating:hover {
+    background: #ffa000 !important;
+}
+
+.ADK-card img {
+    object-fit: cover;
+    width     : 100%;
+    height    : 500px;
+}
+
+.ADK-card-preview img {
+    object-fit: cover;
+    width     : 100%;
+    height    : 240px;
+}
+
+.cover_video {
+    -webkit-filter: brightness(1.3) contrast(1.28) opacity(0.54) sepia(0.09) saturate(1.06);
+            filter: brightness(1.3) contrast(1.28) opacity(0.54) sepia(0.09) saturate(1.06);
+    position      : absolute;
+    width         : 100%;
+    height        : calc(100% + 2.25*var(--height-nav));
+    top           : 50%;
+    left          : 50%;
+    transform     : translate(-50%, calc(-50% + var(--height-nav)));
+    object-fit    : cover;
+    z-index       : -1;
+}
+
+.fixed-action-btn {
+    float   : right;
+    position: relative;
+    right   : 0.5em;
+    bottom  : 1.5em;
+}
+
+
+#ADK-signup > .col, #ADK-login > .col {
+    background-color: var(--color-white-transparent);
+    border-radius   : 2px;
+
+}
+
+.blue-grey {
+    background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+
+.ADK-vertical-align-wrapper {
+    height         : 100vh;
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+}
+
+.ADK-vertical-align-wrapper > .col {
+    position: relative;
+    top     : calc(-1 * var(--height-nav));
+}
+
+h1.brand-logo img {
+    height: 100%;
+}
+
+.ADK-writer:hover {
+    transform : scale(1.05);
+    transition: all 0.2s;
+}
+
+#ADK-user-stats {
+    font-size: 1.3em;
+}
+
+#ADK-user-stats #ADK-numStories,
+#ADK-user-stats #ADK-numpeers,
+#ADK-user-stats #ADK-numReaders {
+    font-size: 1.75em;
+}
+
+#ADK-about-ADK > .col {
+    background-color: var(--color-white-transparent);
+    border-radius   : 2px;
+}
+
+.carousel {
+    height: 67vh;
+}
+
+.carousel-item {
+    width:  30% !important;
+    top  : -30% !important;
+}
+
+
+@media only screen and (min-width: 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height     : var(--height-nav);
+        line-height: var(--height-nav);
+    }
+}
+
+
+@media all and (max-width: 1200px), all and (max-device-width: 1200px) {
+    #ADK-device-detector {
+        font-size: 3px;
+    }
+
+    .ADK-card img {
+        height: 460px;
+    }
+
+    .ADK-card-preview img {
+        height: 200px;
+    }
+}
+
+
+@media all and (max-width: 992px), all and (max-device-width: 992px) {
+    #ADK-device-detector {
+        font-size: 2px;
+    }
+
+    .ADK-desktop-page {
+        display: none;
+    }
+
+    .ADK-mobile-page {
+        display: block;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    nav .brand-logo {
+        margin-left: 0;
+    }
+
+    .ADK-card img {
+        height: 300px;
+    }
+
+    .ADK-card-preview img {
+        height: 240px;
+    }
+
+    .card p {
+        font-size: 1em !important;
+    }
+
+    #ADK-user-stats {
+        font-size: 1.2em;
+    }
+
+    #ADK-user-stats #ADK-numStories,
+    #ADK-user-stats #ADK-numpeers,
+    #ADK-user-stats #ADK-numReaders {
+        font-size: 1.4em;
+    }
+
+    .cover_video {
+        visibility: hidden;
+    }
+}
+
+@media all and (max-width: 600px), all and (max-device-width: 600px) {
+    #ADK-device-detector {
+        font-size: 1px;
+    }
+
+    .ADK-card img {
+        height: 280px;
+    }
+
+    .ADK-card-preview img {
+        height: 280px;
+    }
+}
