@@ -12,16 +12,29 @@ $(function () {
         
         console.log("username " + username);
         console.log("password " + password);
-        
-        
+
+        var loginUser = {
+            username: username,
+            password: password
+        };
+
+        console.log("loginUser  " + loginUser.username);
+        console.log("loginPassword  " + loginUser.password);
+
+
+
+
+
         // Send the GET request.
         $.ajax("/api/login/" + username, {
-            type: "GET",
-            data: username
+            type: "POST",
+            data: loginUser
         }).then(
             function (error) {
                 console.log("need to validate the user");
-                if (error) { $("#username-error").text("I am changed") };
+                var errmsg = JSON.stringify(error);
+                console.log("error " + errmsg);
+                if (error) { $("#username-error").text("Invalid Username or Password") };
                 // if (!validUser) { console.log('valid user is false') }
                 // Reload the page to get the updated list
                 // location.reload();
