@@ -4,7 +4,7 @@ CREATE DATABASE stambdb_local;
 
 USE stambdb_local;
 
-CREATE TABLE users (
+CREATE TABLE Users (
   id INT NOT NULL AUTO_INCREMENT,
   username VARCHAR(50) NOT NULL,
   password VARCHAR (50) NOT NULL,

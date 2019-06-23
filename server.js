@@ -9,8 +9,16 @@ var PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
+app.use(function(err, req, res, next) {
+  console.log('middleware');
+  console.log(err);
+});
 app.use(express.json());
+
 app.use(express.static("public"));
+// app.use("/api", require("./routes/apiRoutes"));
+
+
 
 // Handlebars
 app.engine(
@@ -32,6 +40,7 @@ var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
+
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {

@@ -2,9 +2,13 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all users
-  app.get("/api/users", function(req, res) {
-    db.User.findAll({}).then(function(dbUsers) {
-      res.json(dbUsers);
+  app.get("/api/login/:username", function(req, res) {
+    db.User.findOne({where: { username: req.params.username } }).then(function(dbUser) {
+      if (!dbUser) { console.log("user is not found")
+        res.json({ error: 'user is not found' })
+      }
+      else { console.log("user found")};
+      // res.json(dbUser);
     });
   });
 

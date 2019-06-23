@@ -1,3 +1,5 @@
+var bcrypt = require('bcrypt');
+
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
         username: DataTypes.STRING,
@@ -8,5 +10,6 @@ module.exports = function(sequelize, DataTypes) {
         confirmit: DataTypes.STRING,
         phone: DataTypes.STRING,
     });
+    
     return User;
 };
