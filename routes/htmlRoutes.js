@@ -3,13 +3,37 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.User.findAll({}).then(function(dbUser) {
-      res.render("loginPage.handlebars", {
-        msg: "Welcome!",
-        user: dbUser
-      });
-    });
+      res.render("index.handlebars");
   });
+
+  app.get("/index", function(req, res) {
+    res.render("index.handlebars");
+  });
+
+  app.get("/profile", function(req, res) {
+    res.render("profile.handlebars");
+  });
+
+  app.get("/settings", function(req, res) {
+    res.render("settings.handlebars");
+  });
+
+  app.get("/compose", function(req, res) {
+    res.render("compose.handlebars");
+  });
+
+  app.get("/peers", function(req, res) {
+    res.render("peers.handlebars");
+  });
+
+  app.get("/meettheADKTeam", function(req, res) {
+    res.render("meettokushu.handlebars");
+  });
+
+  app.get("/uploadpictures", function(req, res) {
+    res.render("uploadphotos.handlebars");
+  });
+
 
   // Load Users page and pass in an user by id
   app.get("/user/:id", function(req, res) {
@@ -20,14 +44,24 @@ module.exports = function(app) {
     });
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("/register", function(req, res) {
-    res.render("registrationPage.handlebars", {
-        style: "body" })
-  });
+  // app.get("/register", function(req, res) {
+  //   res.render("registrationPage.handlebars", {
+  //       style: "main_body" })
+  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
-    res.render("404");
+    res.render("404.handlebars");
+  });
+
+  // Render 404 page for any unmatched routes
+  // app.get("/login", function(req, res) {
+  //   res.render("registrationPage.handlebars");
+  // });
+
+
+  // Render 404 page for any unmatched routes
+  app.get("/landingpage", function(req, res) {
+    res.render("landingpage.handlebars");
   });
 };
