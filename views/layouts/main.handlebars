@@ -1,45 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>A Different Kind: Login</title>
-    <script src="https://kit.fontawesome.com/a672c7f42a.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-    <link rel="stylesheet" type="text/css" href="styles/registration.css">
-    <!-- JQuery -->
-<!--    <script src="https://code.jquery.com/jquery.js"></script>-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Everyone has a story to tell. Hear them out.">
+        <meta name="author" content="Serena, Tamami, Angel, Madison, Bernard">
+        <title>A Different Kind</title>
+
+<!--        <link rel="icon" type="image/png" href="../public/assets/images/ADK.png">-->
+        <link rel="icon" type="image/png" href="/images/special.jpg">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Leckerli+One|Nunito" rel="stylesheet">
+<!--        <link type="text/css" rel="stylesheet" href="../public/assets/css/materialize/materialize.min.css" media="screen,projection">-->
+        <link type="text/css" rel="stylesheet" href="/assets/css/materialize/materialize.min.css" media="screen,projection">
+
+        
+<!--        <link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">-->
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+    </head>
+    <body class="blue-grey lighten-5">
+       
+        <nav>
+            <div class="nav-wrapper grey darken-4">
+                <a href="/index" class="brand-logo">A Different Kind</a>
+
+                <a href="#" data-activates="ADK-menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="ADK-dropdown-writer" class="dropdown-content">
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+
+                <ul class="right hide-on-med-and-down" id="ADK-menu-desktop">
+                    <li><a class="ADK-menu-desktop-items" href="/index">Home</a></li>
+                    <li class="green darken-2"><a class="ADK-menu-desktop-items" href="/uploadpictures">Compose</a></li>
+                    <li><a class="ADK-menu-desktop-items" href="/peers">Find Peers</a></li>
+                    <li><a class="ADK-menu-desktop-items dropdown-button" href="#" data-activates="ADK-dropdown-writer">Bernard<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="ADK-menu-mobile-items" href="/meettheADKTeam">Meet ADK Team</a></li>
+                </ul>
+                
+               
+                <ul class="side-nav" id="ADK-menu-mobile">
+                    <li class="black-text center-align">Bernard</li>
+                    <li class="divider"></li>
+                    <li><a class="ADK-menu-mobile-items" href="/index">Home</a></li>
+                    <li class="green lighten-3"><a class="ADK-menu-mobile-items" href="/uploadpictures">Compose</a></li>
+                    <li><a class="ADK-menu-mobile-items" href="/peers">Find peers</a></li>
+                    <li class="divider"></li>
+                    <li><a class="ADK-menu-mobile-items" href="/profile">Profile</a></li>
+                    <li><a class="ADK-menu-mobile-items" href="/settings">Settings</a></li>
+                    <li><a class="ADK-menu-mobile-items" href="#">Logout</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class = "container">
+            {{{body}}}
+        </div>
+ <div class="footer-copyright teal darken-1">
+                <div class="container">
+                    <div class="center-align">
+                        Copyright © 2019 by <a class="lime-text text-lighten-4" href="https://www.linkedin.com/in/serenamallavarapu/" target="_blank">Serena</a>, <a class="lime-text text-lighten-4" href="https://www.linkedin.com/in/tamami-polk-566b75/" target="_blank">Tamami</a>, <a class="lime-text text-lighten-4" href="https://www.linkedin.com/in/angel-rivas-508024123/" target="_blank">Angel</a>, <a class="lime-text text-lighten-4" href="https://www.linkedin.com/in/brian-lawrence-17a7049a/" target="_blank">Madison</a>, <a class="lime-text text-lighten-4" href="https://www.linkedin.com/in/bernard-dzekashu/" target="_blank">Bernard</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--        <script type="text/javascript" src="../public/assets/javascript/materialize/materialize.min.js"></script>-->
+        <script type="text/javascript" src="/assets/javascript/materialize/materialize.min.js"></script>
 
 
 
+        <script type="text/javascript">
+            function displayLogin() {
+                $(".ADK-signup-wrapper").fadeOut(200);
+                $(".ADK-login-wrapper").fadeIn(1000);
+            }
 
-</head>
+            function displaySignup() {
+                $(".ADK-login-wrapper").fadeOut(200);
+                $(".ADK-signup-wrapper").fadeIn(1000);
+            }
 
-<body>
-  {{{body}}}
-</body>
+            $(document).ready(function() {
+                displaySignup();
 
-<!-- Jquery JS-->
+                
+                $(".dropdown-button").dropdown();
 
-<!--<script src="../../public/js/login.js"></script>-->
+                
+                $(".button-collapse").sideNav();
+            });
+        </script>
+    </body>
+    <script src="/js/login.js"></script>
+    <script src="/js/registration.js"></script>
 
-<script src="/js/login.js"></script>
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-<script href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
 
 </html>
-
-

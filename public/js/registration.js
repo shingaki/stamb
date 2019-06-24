@@ -1,31 +1,30 @@
-$(document).ready(function() {
+$(function () {
+    $(".submit-button-100").on("click", function (event) {
+        // $(".login100-form-btn").on("click", function (event) {
+        // Make sure to preventDefault on a submit event.
 
-    var $newUserName = $("input.new-username");
-    var $newFirstInput = $("input.new-first");
-    var $newLastInput = $("input.new-last");
-    var $newEmailInput = $("input.new-email");
-    var $newPasswordInput = $("input.new-password");
+        console.log("button here");
 
-    function insertNewRegistration(event) {
-        event.prevntDefault();
-        var newRegistration = {
-            username: $newUserName.val().trim(),
-            first: $newFirstInput.val().trim(),
-            last: $newLastInput.val().trim(),
-            email: $newEmailInput.val().trim(),
-            password: $newPasswordInput.val().trim()
+        var newUser = {
+            fullname: $("#ADK-fullname").val().trim(),
+            username: $("#ADK-username").val().trim(),
+            email: $("#ADK-email").val().trim(),
+            password: $("#ADK-password").val().trim()
         };
 
-        $.post("/api/registration", newRegistration);
-        $newUserName.val("");
-        $newFirstInput.val("");
-        $newLastInput.val("");
-        $newEmailInput.val("");
-        $newPasswordInput.val("");
-    }
 
-})
-
-
-
-
+        // Send the GET request.
+        $.ajax("/api/register/", {
+            type: "PUT",
+            data: newUser
+        }).then(
+            function () {
+                console.log("created new user");
+                // if (!validUser) { console.log('valid user is false') }
+                // Reload the page to get the updated list
+                location.reload();
+                // if (statusCode == 404) { console.log("error 404")};
+            }
+        );
+    });
+});
