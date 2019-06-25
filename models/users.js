@@ -20,6 +20,8 @@ module.exports = function(sequelize, DataTypes) {
         password: DataTypes.STRING,
         fullname: DataTypes.STRING,
         email: DataTypes.STRING,
+        share: DataTypes.STRING,
+        mystory: DataTypes.STRING
     });
 
     return User;
