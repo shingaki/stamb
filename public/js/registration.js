@@ -3,7 +3,11 @@
 
         event.preventDefault();
 
-        console.log("here");
+        var username = $("#ADK-fullname").val().trim();
+        console.log("enter username " + username);
+
+
+        console.log("registration here");
 
         var newUser = {
             fullname: $("#ADK-fullname").val().trim(),
@@ -11,18 +15,47 @@
             email: $("#ADK-email").val().trim(),
             password: $("#ADK-password").val().trim(),
             share: 1,
-            story: "No Where To Go",
+            mystory: "No Where To Go",
         };
 
-
-        // Send the GET request.
-        $.ajax("/api/register/", {
+        // See if the user name is unique
+        $.ajax("/api/register/user/" + username, {
             type: "POST",
             data: newUser
         }).then(
-            function () {
-                console.log("created new user");
-                window.location.replace("/thankyou");
+            function (error) {
+                console.log("not unique user");
+                var regerrmsg = JSON.stringify(error);
+                console.log("error " + regerrmsg);
+                if (error) {
+                    $("#reguser-error").text("User name must be unique.");
+                    document.getElementById("registration-form").reset();
+                } else {
+                    $.ajax("/api/register/", {
+                        type: "POST",
+                        data: newUser
+                    }).then(
+                        function () {
+                            console.log("created new user");
+                            window.location.replace("/thankyou");
+                        }
+                    );
+
+                }
+                ;
             }
         );
+
+
+        // Send the GET request.
+
+        // $.ajax("/api/register/", {
+        //     type: "POST",
+        //     data: newUser
+        // }).then(
+        //     function () {
+        //         console.log("created new user");
+        //         window.location.replace("/thankyou");
+        //     }
+        // );
 });

@@ -19,19 +19,13 @@ module.exports = function(app) {
           console.log("passwords do not match");
           res.json({error: 'user invalid'})
         } else {
-          console.log("password match")
+          console.log("password match");
+          res.json(dbUser);
         }
       }
     });
   });
 
-
-  // Create a new User
-  // app.post("/api/users", function (req, res) {
-  //   db.User.create(req.body).then(function (dbUser) {
-  //     res.json(dbUser);
-  //   });
-  // });
 
   // Delete an User by id
   app.delete("/api/users/:id", function (req, res) {
@@ -40,9 +34,25 @@ module.exports = function(app) {
     });
   });
 
+  // Get user to see if they are unique username
+  app.post("/api/register/user/:username", function (req, res) {
+
+    console.log('register provided ' + req.body.username);
+    db.User.findOne({where: {username: req.body.username}}).then(function (dbUser) {
+      if (dbUser) {
+        console.log("user was found");
+        res.json({error: 'username is not unique'});
+      } else {
+        console.log("user not found");
+        res.json(true);
+        }
+    });
+  });
+
   // Create a new User
   app.post("/api/register", function (req, res) {
     db.User.create(req.body).then(function () {
+      console.log("create the user");
       res.json(true);
     });
   });
