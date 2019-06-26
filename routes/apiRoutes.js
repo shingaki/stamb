@@ -27,11 +27,11 @@ module.exports = function(app) {
 
 
   // Create a new User
-  app.post("/api/users", function (req, res) {
-    db.User.create(req.body).then(function (dbUser) {
-      res.json(dbUser);
-    });
-  });
+  // app.post("/api/users", function (req, res) {
+  //   db.User.create(req.body).then(function (dbUser) {
+  //     res.json(dbUser);
+  //   });
+  // });
 
   // Delete an User by id
   app.delete("/api/users/:id", function (req, res) {
@@ -41,11 +41,13 @@ module.exports = function(app) {
   });
 
   // Create a new User
-  app.put("/api/register", function (req, res) {
-    db.User.create(req.body).then(function (dbUser) {
-      res.json(dbUser);
+  app.post("/api/register", function (req, res) {
+    db.User.create(req.body).then(function () {
+      res.json(true);
     });
   });
+
+
 }
 
 
