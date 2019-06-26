@@ -53,10 +53,12 @@ module.exports = function(app) {
     res.render("thankyou.handlebars");
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404.handlebars");
+
+  app.get("/story", function(req, res) {
+    res.render("story.handlebars");
   });
+
+
 
   // Render 404 page for any unmatched routes
   // app.get("/login", function(req, res) {
@@ -67,5 +69,10 @@ module.exports = function(app) {
   // Render 404 page for any unmatched routes
   app.get("/landingpage", function(req, res) {
     res.render("landingpage.handlebars");
+  });
+
+  // Render 404 page for any unmatched routes
+  app.get("*", function(req, res) {
+    res.render("404.handlebars");
   });
 };

@@ -6,9 +6,9 @@
                             <!-- <h1 class="brand-logo ADK-attacher-1"><img class="responsive-img" src="../public/assets/images/ADK.png" alt="ADK logo">ADK</h1> -->
                             <p>Everyone deserves to have fun.</p>
                         </div>
-
+                        <div id="reguser-error"></div>
                         <div class="col s10 offset-s1">
-                            <form method="PUT">
+                            <form id="registration-form" name="registration-form" method="PUT">
                                 <div class="input-field">
                                     <input type="text" name="fullname" placeholder="Fullname" id="ADK-fullname" class="validate" required>
                                 </div>
@@ -49,17 +49,15 @@
 <!--                            <h1 class="brand-logo black-text ADK-attacher-1"><img class="responsive-img" src="../public/assets/images/ADK.png" alt="ADK logo">ADK</h1>-->
                             <p class="black-text">Everyone deserves to have fun.</p>
                         </div>
-
+                        <div id="username-error"></div>
                         <div class="col s10 offset-s1">
-                            <form id="ADK-form-login" action="/api/login" method="POST">
+                            <form id="ADK-form-login" name="ADK-form-login" method="POST">
                                 <div class="input-field">
-                                    <label for="ADK-login-username" class="blue-grey-text text-darken-2">Username</label>
-                                    <input type="text" name="username" id="login-username" class="validate" required>
+                                    <input type="text" name="username" id="login-username" placeholder="Username" class="validate" required>
                                 </div>
 
                                 <div class="input-field">
-                                    <label for="ADK-login-password" class="blue-grey-text text-darken-2">Password</label>
-                                    <input type="password" name="password" id="login-password" class="validate" required>
+                                    <input type="password" name="password" id="login-password" placeholder="Password" class="validate" required>
                                 </div>
 
                                 <div class="ADK-separator-2"></div>
