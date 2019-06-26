@@ -1,7 +1,9 @@
-$(function () {
+
     $(".submit-button-100").on("click", function (event) {
-        // $(".login100-form-btn").on("click", function (event) {
-        // Make sure to preventDefault on a submit event.
+
+        event.preventDefault();
+
+        console.log("here");
 
         var newUser = {
             fullname: $("#ADK-fullname").val().trim(),
@@ -10,23 +12,17 @@ $(function () {
             password: $("#ADK-password").val().trim(),
             share: 1,
             story: "No Where To Go",
-
-
         };
 
 
         // Send the GET request.
         $.ajax("/api/register/", {
-            type: "PUT",
+            type: "POST",
             data: newUser
         }).then(
             function () {
                 console.log("created new user");
-                // if (!validUser) { console.log('valid user is false') }
-                // Reload the page to get the updated list
-                // location.reload();
-                // if (statusCode == 404) { console.log("error 404")};
+                window.location.replace("/thankyou");
             }
         );
-    });
 });

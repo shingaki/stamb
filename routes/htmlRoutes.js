@@ -22,8 +22,8 @@ module.exports = function(app) {
     res.render("compose.handlebars");
   });
 
-  app.get("/peers", function(req, res) {
-    res.render("peers.handlebars");
+  app.get("/story", function(req, res) {
+    res.render("story.handlebars");
   });
 
   app.get("/meettheADKTeam", function(req, res) {
@@ -48,6 +48,10 @@ module.exports = function(app) {
   //   res.render("registrationPage.handlebars", {
   //       style: "main_body" })
   // });
+
+  app.get("/thankyou", function(req, res) {
+    res.render("thankyou.handlebars");
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
