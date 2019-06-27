@@ -20,7 +20,7 @@ CREATE TABLE Users (
 
 
 insert into users (username, password, fullname, email, share, title, mystory, createdAt, updatedAt)
-values ('tpolk', 'password', 'Tamami Polk', 'tpolk@anywhere.com', 0, 'My Title', 'My Story', sysdate(), sysdate());
+values ('rpolk', 'password', 'Richard Polk', 'rpolk@myplace.com', 0, 'Art Class', 'There is a great art class for special needs children located in Casa Linda. My son really likes the staff and the activites', sysdate(), sysdate());
 
 
 

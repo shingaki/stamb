@@ -27,9 +27,10 @@ module.exports = function(app) {
     res.render("compose.handlebars", data);
   });
 
-  app.get("/story", function(req, res) {
-    res.render("story.handlebars");
-  });
+  // app.get("/compose", function(req, res) {
+  //   res.render("compose.handlebars");
+  // });
+
 
   app.get("/meettheADKTeam", function(req, res) {
     res.render("meettokushu.handlebars");
@@ -49,26 +50,24 @@ module.exports = function(app) {
     });
   });
 
-  // app.get("/register", function(req, res) {
-  //   res.render("registrationPage.handlebars", {
-  //       style: "main_body" })
-  // });
+
 
   app.get("/thankyou", function(req, res) {
     res.render("thankyou.handlebars");
   });
 
 
+// show the story page
   app.get("/story", function(req, res) {
-    res.render("story.handlebars");
+    db.User.findAll({
+    }).then(function(data) {
+      var storiesObj = {
+        story: data
+      };
+      console.log(storiesObj);
+      res.render("story", storiesObj);
+    });
   });
-
-
-
-  // Render 404 page for any unmatched routes
-  // app.get("/login", function(req, res) {
-  //   res.render("registrationPage.handlebars");
-  // });
 
 
   // Render 404 page for any unmatched routes
