@@ -1,5 +1,3 @@
-// $(document).ready(function () {
-
 $(function () {
     $(".login100-form-btn").on("click", function (event) {
         // $(".login100-form-btn").on("click", function (event) {
@@ -35,10 +33,6 @@ $(function () {
 
                 if (errmsg.includes("error")) { $("#username-error").text("Invalid Username or Password") }
                 else { window.location.replace("/compose" + error.id );};
-                // if (!validUser) { console.log('valid user is false') }
-                // Reload the page to get the updated list
-                // location.reload();
-                // if (statusCode == 404) { console.log("error 404")};
             }
         );
     });

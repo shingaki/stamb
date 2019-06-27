@@ -27,17 +27,16 @@
                 console.log("not unique user");
                 var regerrmsg = JSON.stringify(error);
                 console.log("error " + regerrmsg);
-                if (error) {
-                    $("#reguser-error").text("User name must be unique.");
+                if (regerrmsg.includes("error")) { $("#username-error").text("User Name Must Be Unique.") 
                     document.getElementById("registration-form").reset();
                 } else {
                     $.ajax("/api/register/", {
                         type: "POST",
                         data: newUser
                     }).then(
-                        function () {
+                        function (newuser) {
                             console.log("created new user");
-                            window.location.replace("/thankyou");
+                            window.location.replace("/compose" + newuser.id);
                         }
                     );
 
@@ -45,17 +44,4 @@
                 ;
             }
         );
-
-
-        // Send the GET request.
-
-        // $.ajax("/api/register/", {
-        //     type: "POST",
-        //     data: newUser
-        // }).then(
-        //     function () {
-        //         console.log("created new user");
-        //         window.location.replace("/thankyou");
-        //     }
-        // );
 });
