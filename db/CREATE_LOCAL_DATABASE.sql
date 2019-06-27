@@ -11,6 +11,7 @@ CREATE TABLE Users (
   fullname VARCHAR (50) NOT NULL,
   email VARCHAR (50) NOT NULL,
   share BOOLEAN NOT NULL,
+  title VARCHAR(30) NULL,
   mystory VARCHAR (255) NULL,
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL,
@@ -18,8 +19,8 @@ CREATE TABLE Users (
 );
 
 
-insert into users (username, password, fullname, email, share, mystory, createdAt, updatedAt)
-values ('tpolk', 'password', 'Tamami Polk', 'tpolk@anywhere.com', 0, '2147701208', sysdate(), sysdate());
+insert into users (username, password, fullname, email, share, title, mystory, createdAt, updatedAt)
+values ('tpolk', 'password', 'Tamami Polk', 'tpolk@anywhere.com', 0, 'My Title', 'My Story', sysdate(), sysdate());
 
 
 

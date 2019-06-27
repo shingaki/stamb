@@ -43,6 +43,10 @@ strong {
     margin-bottom: 0;
 }
 
+#userid {
+    display: none;
+}
+
 .ADK-separator-1 {
     height: 0.4em;
 }

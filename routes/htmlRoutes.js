@@ -18,8 +18,13 @@ module.exports = function(app) {
     res.render("settings.handlebars");
   });
 
-  app.get("/compose", function(req, res) {
-    res.render("compose.handlebars");
+  app.get("/compose:id", function(req, res) {
+    var data = {
+      id: req.params.id
+    }
+    console.log('data '+ data);
+    console.log(JSON.stringify(data));
+    res.render("compose.handlebars", data);
   });
 
   app.get("/story", function(req, res) {
