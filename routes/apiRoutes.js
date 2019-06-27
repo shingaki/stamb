@@ -36,7 +36,6 @@ module.exports = function (app) {
 
     // Get user to see if they are unique username
     app.post("/api/register/user/:username", function (req, res) {
-
         console.log('register provided ' + req.body.username);
         db.User.findOne({where: {username: req.body.username}}).then(function (dbUser) {
             if (dbUser) {
@@ -44,7 +43,7 @@ module.exports = function (app) {
                 res.json({error: 'username is not unique'});
             } else {
                 console.log("user not found");
-                res.json(true);
+                res.json(dbUser);
             }
         });
     });
@@ -52,9 +51,18 @@ module.exports = function (app) {
     // Create a new User
     app.post("/api/register", function (req, res) {
         db.User.create(req.body).then(function () {
+
             console.log("create the user");
-            res.json(true);
+
+
+            db.User.findOne({where: {username: req.body.username}}).then(function (dbUser) {
+                console.log("dbUser " + dbUser);
+                res.json(dbUser);
+            });
+            
         });
+        
+      
     });
 
 
@@ -65,18 +73,17 @@ module.exports = function (app) {
         console.log('req title ' + req.body.title);
         console.log('req id ' + req.body.id);
 
-        db.User.update({title: req.body.title, mystory: req.body.mystory}, {where: {id: req.body.id}}),
-            function (result) {
+        db.User.update({title: req.body.title, mystory: req.body.mystory},
+            {where: {id: req.body.id}})
+            .then(function (result) {
+            console.log("after the update");
                 if (result.changedRows === 0) {
-                    // If no rows were changed, then the ID must not exist, so 404
-                    // return res.status(404).end();
                     console.log("no update made");
                 } else {
-                    // res.status(200).end();
                     console.log("update made");
+                    res.send(result);
                 }
-                ;
-            }
+            })
     });
 }
 

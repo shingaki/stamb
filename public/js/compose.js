@@ -20,18 +20,8 @@ $(".btn-share").on("click", function (event) {
         type: "PUT",
         data: mytitleandstory
     }).then(
-        function (error) {
-            var errmsg = JSON.stringify(error);
-
-            if (errmsg.includes("error")) { $("#username-error").text("Invalid Username or Password") }
-            else { window.location.replace("/compose" + error.id );};
-            // if (!validUser) { console.log('valid user is false') }
-            // Reload the page to get the updated list
-            // location.reload();
-            // if (statusCode == 404) { console.log("error 404")};
-        }
-    );
-
-
-
+        function (mycode) {
+            console.log("updated here");
+            // else { window.location.replace("/story" + error.id );};
+            window.location.replace("/story" + userid);});
 });

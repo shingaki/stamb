@@ -27,9 +27,9 @@ module.exports = function(app) {
     res.render("compose.handlebars", data);
   });
 
-  // app.get("/compose", function(req, res) {
-  //   res.render("compose.handlebars");
-  // });
+  app.get("/composeblank", function(req, res) {
+    res.render("composeblank.handlebars");
+  });
 
 
   app.get("/meettheADKTeam", function(req, res) {
@@ -58,7 +58,7 @@ module.exports = function(app) {
 
 
 // show the story page
-  app.get("/story", function(req, res) {
+  app.get("/story:id", function(req, res) {
     db.User.findAll({
     }).then(function(data) {
       var storiesObj = {
