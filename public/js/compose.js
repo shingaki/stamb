@@ -6,6 +6,8 @@ $(".btn-share").on("click", function (event) {
     var mytitle = $("#ADK-title").val().trim();
     var mystory = $("#ADK-story").val().trim();
 
+    sessionStorage.setItem("userid", userid);
+    
     console.log("myuser id " + userid);
 
     var mytitleandstory = {
@@ -21,7 +23,6 @@ $(".btn-share").on("click", function (event) {
         data: mytitleandstory
     }).then(
         function (mycode) {
-            console.log("updated here");
-            // else { window.location.replace("/story" + error.id );};
-            window.location.replace("/story" + userid);});
+            console.log("mycode " + mycode);
+            window.location.replace("/story" + mycode.id);});
 });

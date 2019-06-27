@@ -22,8 +22,6 @@ module.exports = function(app) {
     var data = {
       id: req.params.id
     }
-    console.log('data '+ data);
-    console.log(JSON.stringify(data));
     res.render("compose.handlebars", data);
   });
 
@@ -64,7 +62,6 @@ module.exports = function(app) {
       var storiesObj = {
         story: data
       };
-      console.log(storiesObj);
       res.render("story", storiesObj);
     });
   });
@@ -75,6 +72,11 @@ module.exports = function(app) {
     res.render("landingpage.handlebars");
   });
 
+  app.get("/logout", function(req, res) {
+    res.render("index.handlebars");
+  });
+  
+  
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404.handlebars");

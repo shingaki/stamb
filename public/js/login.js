@@ -32,7 +32,7 @@ $(function () {
                 console.log("error " + errmsg);
 
                 if (errmsg.includes("error")) { $("#username-error").text("Invalid Username or Password") }
-                else { window.location.replace("/compose" + error.id );};
+                else { window.location.replace("/story" + error.id );};
             }
         );
     });
