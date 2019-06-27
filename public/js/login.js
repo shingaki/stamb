@@ -20,10 +20,7 @@ $(function () {
 
         console.log("loginUser  " + loginUser.username);
         console.log("loginPassword  " + loginUser.password);
-
-
-
-
+        
 
         // Send the GET request.
         $.ajax("/api/login/" + username, {
@@ -32,12 +29,12 @@ $(function () {
         }).then(
             function (error) {
                 console.log("need to validate the user");
-                console.log("error " + error);
+                console.log("error " + error.id);
                 var errmsg = JSON.stringify(error);
                 console.log("error " + errmsg);
 
                 if (errmsg.includes("error")) { $("#username-error").text("Invalid Username or Password") }
-                else { window.location.replace("/story" );};
+                else { window.location.replace("/compose" + error.id );};
                 // if (!validUser) { console.log('valid user is false') }
                 // Reload the page to get the updated list
                 // location.reload();
