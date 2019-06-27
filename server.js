@@ -1,6 +1,10 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var exses = require("express-session");
+var pspt = require("passport");
+
+
 
 var db = require("./models");
 

@@ -23,5 +23,8 @@ insert into users (username, password, fullname, email, share, title, mystory, c
 values ('rpolk', 'password', 'Richard Polk', 'rpolk@myplace.com', 0, 'Art Class', 'There is a great art class for special needs children located in Casa Linda. My son really likes the staff and the activites', sysdate(), sysdate());
 
 
+DELETE FROM stambdb_local.Users
+WHERE id > 5;
+
 
 
